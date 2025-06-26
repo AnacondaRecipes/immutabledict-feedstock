@@ -11,7 +11,7 @@ source:
 
 build:
   skip: True          # [py<38]
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
@@ -42,8 +42,8 @@ about:
   license_family: MIT
   license_file: LICENSE
   summary: A fork of frozendict, an immutable wrapper around dictionaries.
-  description: An immutable wrapper around dictionaries. 
-    immutabledict implements the complete mapping interface and can be used as a 
+  description: An immutable wrapper around dictionaries.
+    immutabledict implements the complete mapping interface and can be used as a
     drop-in replacement for dictionaries where immutability is desired.
 
 extra:

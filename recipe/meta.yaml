@@ -32,7 +32,8 @@ test:
     - tests/
   commands:
     - pip check
-    - pytest tests/
+    - pytest tests/  # [unix]
+    - pytest tests/ -k "not (test_performance)"  # [win]
 
 about:
   home: https://github.com/corenting/immutabledict

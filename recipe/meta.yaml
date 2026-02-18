@@ -1,16 +1,16 @@
 {% set name = "immutabledict" %}
-{% set version = "4.2.1" %}
+{% set version = "4.3.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d91017248981c72eb66c8ff9834e99c2f53562346f23e7f51e7a5ebcf66a3bcc
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: f844a669106cfdc73f47b1a9da003782fb17dc955a54c80972e0d93d1c63c514
 
 build:
-  skip: True          # [py<38]
+  skip: true  # [py<38]
   number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -43,9 +43,10 @@ about:
   license_family: MIT
   license_file: LICENSE
   summary: A fork of frozendict, an immutable wrapper around dictionaries.
-  description: An immutable wrapper around dictionaries.
-    immutabledict implements the complete mapping interface and can be used as a
-    drop-in replacement for dictionaries where immutability is desired.
+  description:
+    - An immutable wrapper around dictionaries.
+    - immutabledict implements the complete mapping interface and can be used as a
+    - drop-in replacement for dictionaries where immutability is desired.
 
 extra:
   recipe-maintainers:

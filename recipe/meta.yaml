@@ -29,11 +29,10 @@ test:
     - pip
     - pytest
   source_files:
-    - tests/
+    - tests
   commands:
     - pip check
-    - pytest tests/  # [unix]
-    - pytest tests/ -k "not (test_performance)"  # [win]
+    - pytest tests
 
 about:
   home: https://github.com/corenting/immutabledict
@@ -43,10 +42,10 @@ about:
   license_family: MIT
   license_file: LICENSE
   summary: A fork of frozendict, an immutable wrapper around dictionaries.
-  description:
-    - An immutable wrapper around dictionaries.
-    - immutabledict implements the complete mapping interface and can be used as a
-    - drop-in replacement for dictionaries where immutability is desired.
+  description: |
+    An immutable wrapper around dictionaries.
+    immutabledict implements the complete mapping interface and can be used as a
+    drop-in replacement for dictionaries where immutability is desired.
 
 extra:
   recipe-maintainers:
